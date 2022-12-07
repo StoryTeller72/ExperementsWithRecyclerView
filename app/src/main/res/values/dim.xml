@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corners">8dp</dimen>
+    <dimen name="cardPadding">2dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="titleSize">32sp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="textHeader">24sp</dimen>
+
+</resources>
