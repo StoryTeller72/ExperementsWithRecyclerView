@@ -2,20 +2,31 @@ package com.example.experementswithrecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.experementswithrecyclerview.databinding.ActivityMainBinding
-import com.example.experementswithrecyclerview.databinding.ItemBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.recyclerViewMain.layoutManager = LinearLayoutManager(this)
-        binding.recyclerViewMain.adapter = ExampleAdapter()
-    }
+        val thisAdapter = ExampleAdapter()
+        binding.recyclerViewMain.adapter = thisAdapter
 
+        binding.ftBtn.setOnClickListener {
+            thisAdapter.items = listOf(
+                Item(14325),
+                Item(11234),
+                Item(154435),
+                Item(21739),
+                Item(21341),
+                Item(112312),
+            )
+        }
+    }
 }
+
